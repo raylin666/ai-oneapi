@@ -4,7 +4,7 @@ GOVERSION:=$(shell go env GOVERSION)
 VERSION=$(shell git describe --tags --always)
 
 .PHONY: run
-# 容器启动后的运行命令
+# 编译并启动项目
 run:
 	go build -ldflags "-s -w" -o one-api && ./one-api --log-dir ./logs
 
